@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #10231F;
+  --color-teal-900: #123832;
+  --color-teal-700: #1F5C52;
+  --color-teal-100: #E7EBE9;
+  --color-gold: #B8923F;
+  --color-paper: #FBFAF7;
+  --color-muted: #5B655F;
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.max-w-content {
+  max-width: 1180px;
+}
