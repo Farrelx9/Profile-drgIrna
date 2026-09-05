@@ -42,7 +42,7 @@ export default function Services() {
             <Reveal
               key={service.name}
               delay={(i % 2) * 0.08}
-              className={`py-6 pr-8 border-teal-700/60 ${
+              className={`py-6 md:pr-8 border-teal-700/60 ${
                 i % 2 === 0 ? "md:border-r" : "md:pl-8"
               } ${i < services.length - (services.length % 2 === 0 ? 2 : 1) ? "border-b" : ""}`}
             >

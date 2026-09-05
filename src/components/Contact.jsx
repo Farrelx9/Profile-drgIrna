@@ -3,10 +3,10 @@ import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
-    <section id="kontak" className="border-t border-teal-100">
-      <div className="max-w-content mx-auto px-6 py-20 md:py-28">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20">
-          <Reveal>
+    <section id="kontak" className="border-t border-teal-100 w-full overflow-hidden">
+      <div className="max-w-content mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-28 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 w-full items-stretch">
+          <Reveal className="w-full">
             <h2 className="font-display text-3xl text-teal-900 leading-tight">
               Buat janji temu
             </h2>
@@ -17,27 +17,27 @@ export default function Contact() {
 
             <dl className="mt-10 space-y-5">
               <div>
-                <dt className="text-xs text-gold">Alamat</dt>
-                <dd className="mt-1 text-ink">
+                <dt className="text-xs text-gold font-medium uppercase tracking-wider">Alamat</dt>
+                <dd className="mt-1 text-ink leading-relaxed">
                   Jl. Tanjung Sadari No.61, Perak Bar.,
                   <br />
                   Kec. Krembangan, Surabaya, Jawa Timur 60177
                 </dd>
               </div>
               <div>
-                <dt className="text-xs text-gold">Telepon / WhatsApp</dt>
-                <dd className="mt-1 text-ink">+62 812-8885-6100</dd>
+                <dt className="text-xs text-gold font-medium uppercase tracking-wider">Telepon / WhatsApp</dt>
+                <dd className="mt-1 text-ink font-medium">+62 812-8885-6100</dd>
               </div>
             </dl>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3.5 sm:gap-4">
               <motion.a
                 href="https://wa.me/6281288856100"
                 target="_blank"
                 rel="noreferrer"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-teal-900 text-paper text-sm hover:bg-teal-700 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-teal-900 text-paper text-sm font-medium hover:bg-teal-700 transition-colors rounded-lg shadow-sm"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -51,7 +51,7 @@ export default function Contact() {
                 rel="noreferrer"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 px-6 py-3 border border-teal-900 text-teal-900 text-sm hover:bg-teal-900 hover:text-paper transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-teal-900 text-teal-900 text-sm font-medium hover:bg-teal-900 hover:text-paper transition-colors rounded-lg"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
                   <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -63,10 +63,10 @@ export default function Contact() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.15} className="aspect-[4/3] md:aspect-auto md:h-full min-h-[320px] bg-teal-100 relative group overflow-hidden rounded-lg border border-teal-100/80 shadow-sm">
+          <Reveal delay={0.15} className="w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-auto md:h-full min-h-[320px] sm:min-h-[360px] bg-teal-100 relative group overflow-hidden rounded-2xl border border-teal-200/80 shadow-md mx-auto">
             <iframe
               title="Lokasi klinik"
-              className="w-full h-full grayscale contrast-125 pointer-events-none md:pointer-events-auto"
+              className="block w-full h-full grayscale contrast-125 border-0 pointer-events-none md:pointer-events-auto"
               loading="lazy"
               src="https://maps.google.com/maps?q=Jl.+Tanjung+Sadari+No.61,+Perak+Barat,+Krembangan,+Surabaya,+Jawa+Timur+60177&z=16&output=embed"
             />
@@ -74,10 +74,10 @@ export default function Contact() {
               href="https://share.google/Ud6E9kyx4qQyy4gZz"
               target="_blank"
               rel="noreferrer"
-              className="absolute bottom-3 right-3 px-4 py-2 bg-teal-900 text-paper text-xs font-medium shadow-md rounded hover:bg-teal-800 transition-all flex items-center gap-1.5 opacity-90 md:opacity-0 md:group-hover:opacity-100"
+              className="absolute bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-4 px-5 py-2.5 bg-teal-950/90 text-paper text-xs font-semibold shadow-lg rounded-full hover:bg-teal-900 transition-all flex items-center justify-center gap-2 w-[calc(100%-2.5rem)] max-w-[240px] md:w-auto opacity-100 md:opacity-0 md:group-hover:opacity-100 backdrop-blur-md border border-white/20"
             >
               <span>Buka di Google Maps</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                 <polyline points="15 3 21 3 21 9" />
                 <line x1="10" y1="14" x2="21" y2="3" />
