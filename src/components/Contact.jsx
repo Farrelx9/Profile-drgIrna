@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
 export default function Contact() {
+  const [mapActive, setMapActive] = useState(false);
+
   return (
     <section id="kontak" className="border-t border-teal-100 w-full overflow-hidden">
       <div className="max-w-content mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-28 w-full">
@@ -66,23 +69,55 @@ export default function Contact() {
           <Reveal delay={0.15} className="w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-auto md:h-full min-h-[320px] sm:min-h-[360px] bg-teal-100 relative group overflow-hidden rounded-2xl border border-teal-200/80 shadow-md mx-auto">
             <iframe
               title="Lokasi klinik"
-              className="block w-full h-full grayscale contrast-125 border-0 pointer-events-none md:pointer-events-auto"
+              className={`block w-full h-full grayscale contrast-125 border-0 transition-all ${
+                mapActive ? "pointer-events-auto" : "pointer-events-none md:pointer-events-auto"
+              }`}
               loading="lazy"
               src="https://maps.google.com/maps?q=Jl.+Tanjung+Sadari+No.61,+Perak+Barat,+Krembangan,+Surabaya,+Jawa+Timur+60177&z=16&output=embed"
             />
-            <a
-              href="https://share.google/Ud6E9kyx4qQyy4gZz"
-              target="_blank"
-              rel="noreferrer"
-              className="absolute bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-4 px-5 py-2.5 bg-teal-950/90 text-paper text-xs font-semibold shadow-lg rounded-full hover:bg-teal-900 transition-all flex items-center justify-center gap-2 w-[calc(100%-2.5rem)] max-w-[240px] md:w-auto opacity-100 md:opacity-0 md:group-hover:opacity-100 backdrop-blur-md border border-white/20"
-            >
-              <span>Buka di Google Maps</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
-            </a>
+
+            {/* Mobile Interaction Controls */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-4 flex flex-col sm:flex-row items-center justify-center gap-2 w-[calc(100%-2rem)] max-w-[320px] md:w-auto z-10">
+              {!mapActive ? (
+                <button
+                  type="button"
+                  onClick={() => setMapActive(true)}
+                  className="md:hidden w-full px-4 py-2.5 bg-teal-950/90 text-paper text-xs font-semibold shadow-xl rounded-full hover:bg-teal-900 backdrop-blur-md border border-white/20 flex items-center justify-center gap-2 transition-all active:scale-95"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>Ketuk untuk Menggerakkan Peta</span>
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setMapActive(false)}
+                  className="md:hidden w-full px-4 py-2.5 bg-amber-400 text-teal-950 text-xs font-semibold shadow-xl rounded-full hover:bg-amber-300 backdrop-blur-md flex items-center justify-center gap-2 transition-all active:scale-95"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  <span>Kunci Peta (Scroll Layar)</span>
+                </button>
+              )}
+
+              <a
+                href="https://share.google/Ud6E9kyx4qQyy4gZz"
+                target="_blank"
+                rel="noreferrer"
+                className="px-4 py-2.5 bg-teal-950/90 text-paper text-xs font-semibold shadow-lg rounded-full hover:bg-teal-900 transition-all flex items-center justify-center gap-2 w-full md:w-auto backdrop-blur-md border border-white/20 opacity-100 md:opacity-0 md:group-hover:opacity-100"
+              >
+                <span>Buka di Google Maps</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
           </Reveal>
         </div>
       </div>
