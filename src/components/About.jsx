@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 const credentials = [
   {
     title: "Pendidikan Dokter Gigi",
-    place: "Universitas Airlangga, 2014",
+    place: "Universitas Brawijaya, 2014",
   },
   {
     title: "Sertifikasi Kedokteran Gigi Estetik",

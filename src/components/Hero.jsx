@@ -129,17 +129,17 @@ export default function Hero() {
 
         <div className="mt-10 flex items-center gap-4 sm:gap-6 px-6 py-2.5 rounded-full bg-teal-950/50 border border-white/10 backdrop-blur-md text-paper/85 text-xs shadow-inner">
           <span>
-            <strong className="text-amber-300 font-display text-base mr-1.5">8+</strong>
+            <strong className="text-amber-300 font-display text-base mr-1.5">6+</strong>
             tahun praktik
           </span>
           <span className="w-px h-3 bg-white/20" />
           <span>
-            <strong className="text-amber-300 font-display text-base mr-1.5">3.000+</strong>
+            <strong className="text-amber-300 font-display text-base mr-1.5">1.000+</strong>
             pasien
           </span>
           <span className="w-px h-3 bg-white/20" />
           <span>
-            <strong className="text-amber-300 font-display text-base mr-1.5">4.9</strong>
+            <strong className="text-amber-300 font-display text-base mr-1.5">4.0</strong>
             rating
           </span>
         </div>

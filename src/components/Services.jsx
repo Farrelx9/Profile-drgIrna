@@ -21,10 +21,6 @@ const services = [
     name: "Pencabutan Gigi",
     desc: "Pencabutan gigi umum maupun gigi bungsu dengan penanganan minim nyeri.",
   },
-  {
-    name: "Behel & Ortodonti",
-    desc: "Konsultasi dan pemasangan kawat gigi untuk merapikan susunan gigi.",
-  },
 ];
 
 export default function Services() {
