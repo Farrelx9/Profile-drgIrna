@@ -63,10 +63,10 @@ export default function Contact() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.15} className="aspect-[4/3] md:aspect-auto md:h-full min-h-[320px] bg-teal-100 relative group">
+          <Reveal delay={0.15} className="aspect-[4/3] md:aspect-auto md:h-full min-h-[320px] bg-teal-100 relative group overflow-hidden rounded-lg border border-teal-100/80 shadow-sm">
             <iframe
               title="Lokasi klinik"
-              className="w-full h-full grayscale contrast-125"
+              className="w-full h-full grayscale contrast-125 pointer-events-none md:pointer-events-auto"
               loading="lazy"
               src="https://maps.google.com/maps?q=Jl.+Tanjung+Sadari+No.61,+Perak+Barat,+Krembangan,+Surabaya,+Jawa+Timur+60177&z=16&output=embed"
             />
@@ -74,9 +74,14 @@ export default function Contact() {
               href="https://share.google/Ud6E9kyx4qQyy4gZz"
               target="_blank"
               rel="noreferrer"
-              className="absolute bottom-3 right-3 px-4 py-2 bg-paper text-teal-900 text-xs shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute bottom-3 right-3 px-4 py-2 bg-teal-900 text-paper text-xs font-medium shadow-md rounded hover:bg-teal-800 transition-all flex items-center gap-1.5 opacity-90 md:opacity-0 md:group-hover:opacity-100"
             >
-              Buka di Google Maps
+              <span>Buka di Google Maps</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
             </a>
           </Reveal>
         </div>
