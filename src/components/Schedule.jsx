@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
 const schedule = [
-  { day: "Senin – Jumat", hours: "09.00 – 20.00" },
-  { day: "Sabtu", hours: "09.00 – 17.00" },
-  { day: "Minggu", hours: "Tutup" },
+  { day: "Senin – Jumat", hours: "16.00 – 20.00" },
+  { day: "Sabtu - Minggu", hours: "Tutup" },
+
 ];
 
 export default function Schedule() {
